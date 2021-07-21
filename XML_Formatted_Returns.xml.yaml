@@ -1,0 +1,156 @@
+---
+execution:
+- concurrency: 1
+  scenario: XML_Formatted_Returns-XML_Formatted_Returns
+scenarios:
+  XML_Formatted_Returns-XML_Formatted_Returns:
+    requests:
+    - action: pause
+      jsr223:
+      - language: groovy
+        script-text: |-
+          def groupID = context.expand( '${Login Details#groupID}' )
+          def folder = new File("////tellusdevb05.pc.factset.com//Output//DataFeed//Snapshot_LogFiles//" + groupID + "//")
+          // If directory doesn't exists
+          if( !folder.exists() ) {
+            // Create a directory
+            folder.mkdirs()
+          }
+      label: Create a Directory
+      pause-duration: 0ms
+      target: current-thread
+    - body:
+        serial: ${Login Details#serial}
+        username: ${Login Details#username}
+      label: Lima Token
+      url: https://lima-staging.factset.com/api-lima/credentials
+    - body:
+        serial: ${Login Details#serial}
+        username: ${Login Details#username}
+      label: Lima Token Live
+      url: https://lima-staging.factset.com/api-lima/credentials
+    - headers:
+        X-DataDirect-Auth-Token: '********'
+      label: 685501-Checking with wrong LIMA service
+      url: https://lima-gateway-staging.factset.com/services/go-factset
+    - body:
+        id: factset
+        req_id: '123'
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: 685500-Checking with the invalid ticker
+      url: https://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - body:
+        fields: LAST_TIME_1,CUM_VOL,PREV_CLOSE,OPEN_1,HIGH_1,LOW_1
+        req_id: '100'
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: 685503-Checking the Requested Fields
+      url: https://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - body:
+        fields: LAST_TIME_1,CUM_VOL,PREV_CLOSE,gsyed,@hellp,123%20Hel
+        id: fds
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: 685504-Checking with invalid field name
+      url: https://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - body:
+        fields: 5,102,202,302,2029,2037,10000
+        id: aapl
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: 685513-Checking with few fields with field id's
+      url: https://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - body:
+        id: ${DataSource#symbol}
+        serv: FDS1
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: 685510-TPC-Checking data with the tickers
+      url: https://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - body:
+        id: ${DataSource#symbol}
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: 685511-CPC-Checking data with the tickers
+      url: https://lima-gateway-staging.factset.com/services/${#Global#ControlServer}
+    - action: pause
+      jsr223:
+      - language: groovy
+        script-text: "import groovy.xml.XmlUtil\n\ndef groupID = context.expand( '${Login Details#groupID}' )\ndef logfile = new File('////tellusdevb05.pc.factset.com//Output//DataFeed//Snapshot_LogFiles//' + groupID + '//logfile.txt')\n\ndef tpcTicker = context.expand( '${685510-TPC-Checking data with the tickers#id}' )\ndef cpcTicker = context.expand( '${685511-CPC-Checking data with the tickers#id}' )\n\ndef tpc = context.expand( '${685510-TPC-Checking data with the tickers#ResponseAsXml#//Response[1]/Records[1]}' )\ndef cpc = context.expand( '${685511-CPC-Checking data with the tickers#ResponseAsXml#//Response[1]/Records[1]}' )\n\ndef tpcXml = new XmlSlurper().parseText(tpc)\ndef cpcXml = new XmlSlurper().parseText(cpc)\n\ndef tpcFieldsXml = tpcXml.Record.Fields\ndef cpcFieldsXml = cpcXml.Record.Fields\n\ndef tpcFieldID,cpcFieldID\ndef tpcFieldname,cpcFieldname,tpcFieldvalue,cpcFieldvalue\n\ndef flag = 0,temp = 0\n\n//log.info tpcFieldsXml.Field.size()\n//log.info cpcFieldsXml.Field.size()\n\nif(tpcFieldsXml.Field.size() > 0)\n{\n\tif(cpcFieldsXml.Field.size() > 0)\n\t{\t\n\t\tfor(i=0; i<tpcFieldsXml.Field.size();i++)\n\t\t{\n\t\t\ttpcFieldID = tpcFieldsXml.Field[i].@id\n\t\t\ttpcFieldname = tpcFieldsXml.Field[i].@name\n\t\t\ttpcFieldvalue = tpcFieldsXml.Field[i].@value\n\t\t\tfor(j=0;j<cpcFieldsXml.Field.size();j++)\n\t\t\t{\n\t\t\t\tcpcFieldID = cpcFieldsXml.Field[j].@id\n\t\t\t\tcpcFieldname = cpcFieldsXml.Field[j].@name\n\t\t\t\tcpcFieldvalue = cpcFieldsXml.Field[j].@value\n\t\t\t\tif(tpcFieldID == cpcFieldID)\n\t\t\t\t{\n\t\t\t\t\tflag = 0\n\t\t\t\t\tif(tpcFieldname == cpcFieldname)\n\t\t\t\t\t{\n\t\t\t\t\t\tif(tpcFieldvalue != cpcFieldvalue)\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tlogfile.append(\"For \"+tpcTicker+\", the value of field: \"+tpcFieldID+\", \"+tpcFieldname+\" doesnt match between TPC:\"+tpcFieldvalue+\" and CPC:\"+cpcFieldvalue+\"\\n\")\n\t\t\t\t\t\t\tlog.error(\"For \"+tpcTicker+\": the value of field: \"+tpcFieldID+\", \"+tpcFieldname+\" doesnt match between TPC:\"+tpcFieldvalue+\" and CPC:\"+cpcFieldvalue)\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\telse\n\t\t\t\t\t{\n\t\t\t\t\t\tlogfile.append(\"For \"+tpcTicker+\", the fieldname for ID:\"+tpcFieldID+\",TPC field name: \"+tpcFieldname+\" doesnt match with CPC field name:\"+cpcFieldname+\"\\n\")\n\t\t\t\t\t}\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tflag = 1\n\t\t\t\t}\n\t\t\t}\n\t\t\tif(flag == 1)\n\t\t\t{\n\t\t\t\tlogfile.append(\"For \"+tpcTicker+\", Field ID:\"+tpcFieldID+\" with fieldname:\"+tpcFieldname+\" is not present in CPC\\n\")\n\t\t\t\tlog.error(\"For \"+tpcTicker+\", Field ID:\"+tpcFieldID+\" with fieldname:\"+tpcFieldname+\" is not present in CPC\\n\")\n\t\t\t}\n\t\t}\n\n\t\tfor(i=0; i<cpcFieldsXml.Field.size();i++)\n\t\t{\n\t\t\tcpcFieldID = cpcFieldsXml.Field[i].@id\n\t\t\tcpcFieldname = cpcFieldsXml.Field[i].@name\n\t\t\tcpcFieldvalue = cpcFieldsXml.Field[i].@value\n\t\t\tfor(j=0;j<tpcFieldsXml.Field.size();j++)\n\t\t\t{\n\t\t\t\ttpcFieldID = tpcFieldsXml.Field[j].@id\n\t\t\t\ttpcFieldname = tpcFieldsXml.Field[j].@name\n\t\t\t\ttpcFieldvalue = tpcFieldsXml.Field[j].@value\n\t\t\t\tif(tpcFieldID == cpcFieldID)\n\t\t\t\t{\n\t\t\t\t\tflag = 0\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\tflag = 1\n\t\t\t\t}\n\t\t\t}\n\t\t\tif(flag == 1)\n\t\t\t{\n\t\t\t\tlogfile.append(\"For \"+cpcTicker+\", Field ID:\"+cpcFieldID+\" with fieldname:\"+cpcFieldname+\" is not present in TPC\\n\")\n\t\t\t\tlog.error(\"For \"+cpcTicker+\", Field ID:\"+cpcFieldID+\" with fieldname:\"+cpcFieldname+\" is not present in TPC\\n\")\n\t\t\t}\n\t\t}\n\t}\n\telse\n\t{\n\t\tlogfile.append(\"For \"+cpcTicker+\", Data is not loaded in CPC\\n\")\n\t\tlog.error(\"For \"+cpcTicker+\", Data is not loaded in CPC\\n\")\n\t}\n}\nelse\n{\n\tlogfile.append(\"For \"+tpcTicker+\", Data is not loaded in TPC\\n\")\n\tlog.error(\"For \"+tpcTicker+\", Data is not loaded in TPC\\n\")\n}"
+      label: XML Check
+      pause-duration: 0ms
+      target: current-thread
+    - action: pause
+      jsr223:
+      - language: groovy
+        script-text: |-
+          import java.lang.AssertionError
+          def groupID = context.expand( '${Login Details#groupID}' )
+          def dst = new File('////tellusdevb05.pc.factset.com//Output//DataFeed//Snapshot_LogFiles//' + groupID + '//logfile.txt')
+          def files = dst.text
+          assert files.size() == 0 : "There are Errors/Mismatches in the data for the tickers, Please check the log file"
+          assert files.size() == 0 : "Error:\n"+dst.text
+      label: Single Tickers Log File Check
+      pause-duration: 0ms
+      target: current-thread
+    - body:
+        OC: ${OC Tickers#symbol}
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: Checking OC without any Filter
+      url: http://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - action: pause
+      jsr223:
+      - language: groovy
+        script-text: "import groovy.xml.XmlUtil\n\ndef tpc = context.expand( '${Checking OC without any Filter#ResponseAsXml#//Response[1]/Records[1]}' )\ndef tpcXml = new XmlSlurper().parseText(tpc)\n\ndef id = context.expand( '${Checking OC without any Filter#OC}' )\ndef id2 = id.toString().split('-');\n\ndef option\n\nassert tpcXml.Record.size() > 1 : \"No Options were loaded for the ticker: \"+id\n\nfor(i=0;i<tpcXml.Record.size();i++)\n{\n\toption = tpcXml.Record[i].@req_sym\n\toption = option.toString()\n\tassert option.contains(id2[0].toUpperCase()) : \"Option: \"+option+\" loaded for ticker: \"+id+\" is not valid\";\n}"
+      label: OC Validation
+      pause-duration: 0ms
+      target: current-thread
+    - body:
+        OC: ${OC Tickers#symbol}
+        sf: VALUE_MINMAX,BID_1,0.5,0.65
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: Checking OC with MINMAX Filter
+      url: http://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - action: pause
+      jsr223:
+      - language: groovy
+        script-text: "import groovy.xml.XmlUtil\n\ndef id = context.expand( '${Checking OC with MINMAX Filter#OC}' )\n\ndef tpc = context.expand( '${Checking OC with MINMAX Filter#ResponseAsXml#//Response[1]/Records[1]}' )\ndef tpcXml = new XmlSlurper().parseText(tpc)\n\n//log.info tpcXml.Record.size()\n//log.info tpcXml.Record[0].Fields.Field.size()\n\nassert tpcXml.Record.size() > 1 : \"No Options were loaded for the ticker: \"+id\n\nfor(i=0;i<tpcXml.Record.size();i++)\n{\n\tfor(j=0;j<tpcXml.Record[i].Fields.Field.size();j++)\n\t{\n\t\tdef option = tpcXml.Record[i].@req_sym\n\t\tdef fieldname = tpcXml.Record[i].Fields.Field[j].@name\n\t\tlog.info fieldname\n\t\tif(fieldname == \"BID_1\")\n\t\t{\n\t\t\tdef fieldvalue = tpcXml.Record[i].Fields.Field[j].@value\n\t\t\tdef bidFloat = fieldvalue.toFloat()\n\t\t\tlog.info bidFloat\n\t\t\tassert bidFloat >= 0.5 && bidFloat <= 0.65 : \"For Option: \"+option+\", Bid Value is not in the range of 0.5 and 0.65\"\n\t\t}\n\t}\n}"
+      label: MINMAX Filter Validation
+      pause-duration: 0ms
+      target: current-thread
+    - body:
+        OC: ${OC Tickers#symbol}
+        fields: PUT_CALL,BID_1
+        sf: VALUE_EQUALS,PUT_CALL,P
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: Checking OC with VALUE_EQUALS Filter
+      url: http://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - action: pause
+      jsr223:
+      - language: groovy
+        script-text: "import groovy.xml.XmlUtil\n\ndef id = context.expand( '${Checking OC with VALUE_EQUALS Filter#OC}' )\n\ndef tpc = context.expand( '${Checking OC with VALUE_EQUALS Filter#ResponseAsXml#//Response[1]/Records[1]}' )\ndef tpcXml = new XmlSlurper().parseText(tpc)\n//log.info tpcXml.Record.size()\n//log.info tpcXml.Record.Fields.Field.@name\n\nassert tpcXml.Record.size() > 1 : \"No Options were loaded for the ticker: \"+id\n\nfor(i=0;i<tpcXml.Record.size();i++)\n{\n\tfor(j=0;j<tpcXml.Record[i].Fields.Field.size();j++)\n\t{\n\t\tdef option = tpcXml.Record[i].@req_sym\n\t\tdef fieldname = tpcXml.Record[i].Fields.Field[j].@name\n\t\t//log.info fieldname\n\t\tif(fieldname == \"PUT_CALL\")\n\t\t{\n\t\t\tdef fieldvalue = tpcXml.Record[i].Fields.Field[j].@value\n\t\t\tassert fieldvalue == \"P\" : \"For option: \"+option+\", PUT_CALL is not P\"\n\t\t}\n\t}\n}"
+      label: VALUE EQUALS Filter Validation
+      pause-duration: 0ms
+      target: current-thread
+    - body:
+        OC: ${OC Tickers#symbol}
+      headers:
+        X-DataDirect-Auth-Token: '********'
+      label: Checking OC with VALUE_NOT_EQUALS Filter
+      url: http://lima-gateway-staging.factset.com/services/${#Global#TestServer}
+    - action: pause
+      jsr223:
+      - language: groovy
+        script-text: "import groovy.xml.XmlUtil\n\ndef tpc = context.expand( '${Checking OC with VALUE_NOT_EQUALS Filter#ResponseAsXml#//Response[1]/Records[1]}' )\ndef tpcXml = new XmlSlurper().parseText(tpc)\n//log.info tpcXml.Record.size()\n//log.info tpcXml.Record.Fields.Field.@name\ndef id = context.expand( '${Checking OC with VALUE_NOT_EQUALS Filter#OC}' )\n\nassert tpcXml.Record.size() > 1 : \"No Options were loaded for the ticker: \"+id\n\nfor(i=0;i<tpcXml.Record.size();i++)\n{\n\tfor(j=0;j<tpcXml.Record[i].Fields.Field.size();j++)\n\t{\n\t\tdef option = tpcXml.Record[i].@req_sym\n\t\tdef fieldname = tpcXml.Record[i].Fields.Field[j].@name\n\t\tif(fieldname == \"CUM_VOL\")\n\t\t{\n\t\t\tdef fieldvalue = tpcXml.Record[i].Fields.Field[j].@value\n\t\t\t//log.info fieldvalue.toInteger()\n\t\t\tassert fieldvalue != \"0\" : \"For option: \"+option+\", Cum Vol is Zero\"\n\t\t}\n\t}\n}"
+      label: VALUE NOT EQUALS Filter Validation
+      pause-duration: 0ms
+      target: current-thread
+    variables:
+      groupID: ${#Global#GroupID}
+      serial: '654884'
+      username: fds_demo_fe
+

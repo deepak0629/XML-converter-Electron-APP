@@ -1,0 +1,2215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ae9ac60f-442e-4477-b97a-7bb57f98a2af" created="2.5.0" activeEnvironment="qa" name="XML_Formatted_Returns" resourceRoot="" updated="2.6.0 2019-01-14T14:47:06Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="532413b5-6d2f-4f08-8c8d-65fef55242d5" wadlVersion="http://wadl.dev.java.net/2009/02" name="Lima Token" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Credentials" path="/api-lima/credentials" id="775b07f2-1a0a-47ea-815f-648d49ab74f6">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Credentials" id="d4ee1385-3eb3-4954-99fa-99f6112fb93a" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>fdsqar_c</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>fdsqar_c</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>serial</con:name>
+            <con:value>494713</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>494713</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:cred="https://lima-staging.factset.com/api-lima/credentials">cred:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="fe7457f3-22a7-4326-8c7e-e6706769d709" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="serial" value="494713"/>
+            <con:entry key="username" value="fdsqar_c"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+            <con:entry>serial</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="13796ba6-5a54-434c-a16a-50cc43b53f6e" wadlVersion="http://wadl.dev.java.net/2009/02" name="Lima Token Live" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Credentials" path="/api-lima/credentials" id="8553482b-d960-4fd3-9395-fa0387ba6aa0">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Credentials" id="efcbb4fb-bab1-4447-9803-5bf76af5b39d" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>fdsqar_c</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>fdsqar_c</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>serial</con:name>
+            <con:value>494713</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>494713</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:cred="https://lima-staging.factset.com/api-lima/credentials">cred:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="230349f5-fb5b-464a-8b1c-84399e52bfc6" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="serial" value="494713"/>
+            <con:entry key="username" value="fdsqar_c"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+            <con:entry>serial</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="049fffaf-97c4-4a62-b309-d0864a40eddd" wadlVersion="http://wadl.dev.java.net/2009/02" name="685501-Checking with wrong LIMA service" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Go-factset" path="/services/go-factset" id="4529820d-aaac-4782-852f-3494e3b18524">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Go-factset" id="d12b217a-6350-4add-b421-629801962ef3" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/plain; charset=ISO-8859-1</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="04b04e13-74b4-48b5-958a-c45409e47161" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="4976a4a4-5292-4318-9fc2-5687a2bc45c3" wadlVersion="http://wadl.dev.java.net/2009/02" name="685500-Checking with the invalid ticker" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Dfsnapshot-alpha" path="/services/${#Global#TestServer}" id="246876d9-d29a-4662-8679-98e35e6e350f">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Dfsnapshot-alpha" id="38b0a916-cbff-470e-9b85-496521ea0eeb" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>req_id</con:name>
+            <con:value>123</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>123</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value>factset</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>factset</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="9e78450c-276e-4992-bdb6-ccdc2022157b" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="req_id" value="123"/>
+            <con:entry key="id" value="factset"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>req_id</con:entry>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="c9b64e35-5c66-429c-b6d3-88570852fef3" wadlVersion="http://wadl.dev.java.net/2009/02" name="685503-Checking the Requested Fields" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Dfsnapshot-alpha" path="/services/${#Global#TestServer}" id="d31fdf0b-6248-48e5-a4f6-716f5f02ba54">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Dfsnapshot-alpha" id="306c93c3-702a-4302-81f6-510c7f83b5c9" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>fields</con:name>
+            <con:value>LAST_TIME_1,CUM_VOL,PREV_CLOSE,OPEN_1,HIGH_1,LOW_1</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>LAST_TIME_1,CUM_VOL,PREV_CLOSE,OPEN_1,HIGH_1,LOW_1</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>req_id</con:name>
+            <con:value>100</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>100</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="42d71490-d6a2-4e39-bde3-4d0425b6b280" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="req_id" value="100"/>
+            <con:entry key="fields" value="LAST_TIME_1,CUM_VOL,PREV_CLOSE,OPEN_1,HIGH_1,LOW_1"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>fields</con:entry>
+            <con:entry>req_id</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="96a78748-521c-465a-806c-b50568eec9d0" wadlVersion="http://wadl.dev.java.net/2009/02" name="685504-Checking with invalid field name" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="DFSnapshot" path="/services/${#Global#TestServer}" id="bea85e5a-e63f-4519-82e3-3d8307935926">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="DFSnapshot" id="b4edafd3-418c-49e6-a90c-c9ec0604b0f1" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value>fds</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>fds</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>fields</con:name>
+            <con:value>LAST_TIME_1,CUM_VOL,PREV_CLOSE,gsyed,@hellp,123%20Hel</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>LAST_TIME_1,CUM_VOL,PREV_CLOSE,gsyed,@hellp,123%20Hel</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="754c9a11-f140-41f5-a861-9618ba0d4852" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="id" value="fds"/>
+            <con:entry key="fields" value="LAST_TIME_1,CUM_VOL,PREV_CLOSE,gsyed,@hellp,123%20Hel"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+            <con:entry>fields</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="d69bc92f-c392-4c5d-bd64-a38750f49c0f" wadlVersion="http://wadl.dev.java.net/2009/02" name="685513-Checking with few fields with field id's" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="DFSnapshot" path="/services/${#Global#TestServer}" id="75201c09-aa94-40de-bc3a-5d41183ed758">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="DFSnapshot" id="3876b8d5-e59b-4127-8ef7-1dd5fa63e971" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value>aapl</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>aapl</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>fields</con:name>
+            <con:value>5,102,202,302,2029,2037,10000</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>5,102,202,302,2029,2037,10000</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="f6186145-98b3-4b47-96c6-40916d598a6a" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="id" value="aapl"/>
+            <con:entry key="fields" value="5,102,202,302,2029,2037,10000"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+            <con:entry>fields</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="51004dbe-cc16-4d9d-be61-c7620bdc6d24" wadlVersion="http://wadl.dev.java.net/2009/02" name="685510-TPC-Checking data with the tickers" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="DFSnapshot" path="/services/${#Global#TestServer}" id="45703a50-8ca6-43df-b299-b55dc9e324b6">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="DFSnapshot" id="16563e27-48ab-4a35-8e33-79c83f4a1e47" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>serv</con:name>
+            <con:value>FDS1</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>FDS1</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:dfs="https://lima-gateway-staging.factset.com/services/DFSnapshot">dfs:Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="f4d2502d-e89b-4ac7-a52c-d17416e84593" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="serv" value="FDS1"/>
+            <con:entry key="id" value=""/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>serv</con:entry>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="9e1f1e29-d6b8-4966-895d-c108d4ecbd29" wadlVersion="http://wadl.dev.java.net/2009/02" name="685511-CPC-Checking data with the tickers" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="DFSnapshot" path="/services/${#Global#ControlServer}" id="0509c515-41a1-4d8a-afb2-ce37642f15c2">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="DFSnapshot" id="7f6d5851-ccde-4a5c-9bcf-33c1acbf40a3" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>serv</con:name>
+            <con:value>FDS1</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>FDS1</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value>aapl</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>aapl</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="79595ac4-50de-4cd7-95ee-20e9ae3d305c" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="serv" value="FDS1"/>
+            <con:entry key="id" value="aapl"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>serv</con:entry>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="1fc570cc-7efd-4ca6-ad22-227880b720cd" wadlVersion="http://wadl.dev.java.net/2009/02" name="Checking OC without any Filter" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="DFSnapshot" path="/services/${#Global#TestServer}" id="5d0b9dc7-fded-44f6-b0f0-767b529123fc">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="DFSnapshot" id="228552cd-abf4-4eb7-8713-b2faf3f92670" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>OC</con:name>
+            <con:value>aapl-usa</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>aapl-usa</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>fields</con:name>
+            <con:value>BID_1,ASK_1,PREV_CLOSE</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>BID_1,ASK_1,PREV_CLOSE</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/plain; charset=ISO-8859-1</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="98ca9efb-ebd0-43ce-a10a-c8cb194eb9ac" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="OC" value="aapl-usa"/>
+            <con:entry key="fields" value="BID_1,ASK_1,PREV_CLOSE"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>OC</con:entry>
+            <con:entry>fields</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="2926a664-a9a2-4459-8fba-c3a201f7517a" wadlVersion="http://wadl.dev.java.net/2009/02" name="Checking OC with MINMAX Filter" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Dfsnapshot-alpha" path="/services/${#Global#TestServer}" id="02631038-ebc3-4711-998b-2817b8df1cc5">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Dfsnapshot-alpha" id="1ad43c56-15dc-47bc-ab6a-9b0791346525" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>OC</con:name>
+            <con:value>aapl-usa</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>aapl-usa</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>fields</con:name>
+            <con:value>LAST_1,CUM_VOL,STRIKE_PRICE,EXPIRATION_DATE,PUT_CALL,BID_1</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>LAST_1,CUM_VOL,STRIKE_PRICE,EXPIRATION_DATE,PUT_CALL,BID_1</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>sf</con:name>
+            <con:value>VALUE_MINMAX,BID_1,40,50</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>VALUE_MINMAX,BID_1,40,50</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/plain; charset=ISO-8859-1</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="b00e70a3-60b8-48c6-9a09-b4b9455af7c5" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="sf" value="VALUE_MINMAX,BID_1,40,50"/>
+            <con:entry key="OC" value="aapl-usa"/>
+            <con:entry key="fields" value="LAST_1,CUM_VOL,STRIKE_PRICE,EXPIRATION_DATE,PUT_CALL,BID_1"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>OC</con:entry>
+            <con:entry>fields</con:entry>
+            <con:entry>sf</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="0e95f18b-533d-44bd-9718-5a2a2e946463" wadlVersion="http://wadl.dev.java.net/2009/02" name="Checking OC with VALUE_EQUALS Filter" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Dfsnapshot-alpha" path="/services/${#Global#TestServer}" id="8758013e-1077-4c5e-b730-2e7fcdcecc7e">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Dfsnapshot-alpha" id="1f31e47c-d56d-4ec3-90d2-0c115fcbf198" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>OC</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>fields</con:name>
+            <con:value>PUT_CALL,BID_1</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>PUT_CALL,BID_1</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>sf</con:name>
+            <con:value>VALUE_EQUALS,PUT_CALL,P</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>VALUE_EQUALS,PUT_CALL,P</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/plain; charset=ISO-8859-1</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="9fdc8955-fe53-4629-8219-84194121260a" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="sf" value="VALUE_EQUALS,PUT_CALL,P"/>
+            <con:entry key="OC" value="vod-lon"/>
+            <con:entry key="fields" value="PUT_CALL,BID_1"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>OC</con:entry>
+            <con:entry>fields</con:entry>
+            <con:entry>sf</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="b7b94a5e-da41-4957-a858-9595cc5c4c67" wadlVersion="http://wadl.dev.java.net/2009/02" name="Checking OC with VALUE_NOT_EQUALS Filter" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="DFSnapshot" path="/services/${#Global#TestServer}" id="1593f63a-2508-4445-bf0d-ef9f1de16b90">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="DFSnapshot" id="5ed74841-cb84-4ca4-a503-aca14184f0fe" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>OC</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>fields</con:name>
+            <con:value>LAST_1,CUM_VOL,STRIKE_PRICE,EXPIRATION_DATE,PUT_CALL</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>LAST_1,CUM_VOL,STRIKE_PRICE,EXPIRATION_DATE,PUT_CALL</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>sf</con:name>
+            <con:value>VALUE_NOT_EQUALS,CUM_VOL,0</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>VALUE_NOT_EQUALS,CUM_VOL,0</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/plain; charset=ISO-8859-1</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="244b985b-a4e8-464c-9c46-e452d5a9e5a3" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="sf" value="VALUE_NOT_EQUALS,CUM_VOL,0"/>
+            <con:entry key="OC" value="vod-lon"/>
+            <con:entry key="fields" value="LAST_1,CUM_VOL,STRIKE_PRICE,EXPIRATION_DATE,PUT_CALL"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>OC</con:entry>
+            <con:entry>fields</con:entry>
+            <con:entry>sf</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="2fa571cd-f6de-45e3-994e-d1ee65510d86" name="XML_Formatted_Returns">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="937b609f-c986-4d1e-884d-ca6e432ca435" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="XML_Formatted_Returns" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Login Details" id="0cd8a0a2-198b-41b3-99c8-ca11483ab6d0">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>username</con:name>
+              <con:value>fds_demo_fe</con:value>
+            </con:property>
+            <con:property>
+              <con:name>serial</con:name>
+              <con:value>654884</con:value>
+            </con:property>
+            <con:property>
+              <con:name>groupID</con:name>
+              <con:value>${#Global#GroupID}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Create a Directory" id="07782eab-83a3-4b6e-b6a2-45f6038bb5dc">
+        <con:settings/>
+        <con:config>
+          <script>def groupID = context.expand( '${Login Details#groupID}' )
+def folder = new File("////tellusdevb05.pc.factset.com//Output//DataFeed//Snapshot_LogFiles//" + groupID + "//")
+// If directory doesn't exists
+if( !folder.exists() ) {
+  // Create a directory
+  folder.mkdirs()
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Lima Token" id="a76d536c-fa97-4c28-8027-1aa4e96b6f0b">
+        <con:settings/>
+        <con:config service="Lima Token" resourcePath="/api-lima/credentials" methodName="Credentials" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Lima Token" id="fe7457f3-22a7-4326-8c7e-e6706769d709" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-staging.factset.com/api-lima/credentials</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f505568d-edd7-4c92-9516-d93fc318b794" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="serial" value="${Login Details#serial}"/>
+              <con:entry key="username" value="${Login Details#username}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>serial</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Lima Token Live" id="e066fe13-67d4-453a-a421-3de555ae0d1d">
+        <con:settings/>
+        <con:config service="Lima Token Live" resourcePath="/api-lima/credentials" methodName="Credentials" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Lima Token Live" id="230349f5-fb5b-464a-8b1c-84399e52bfc6" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-staging.factset.com/api-lima/credentials</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="53c0e8a9-6552-43a5-9f30-b2680a6ff625" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="serial" value="${Login Details#serial}"/>
+              <con:entry key="username" value="${Login Details#username}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>serial</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="685501-Checking with wrong LIMA service" id="60f4f4e4-c34b-4953-b9e6-a105b55b59f7">
+        <con:settings/>
+        <con:config service="685501-Checking with wrong LIMA service" resourcePath="/services/go-factset" methodName="Go-factset" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="685501-Checking with wrong LIMA service" id="04b04e13-74b4-48b5-958a-c45409e47161" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-gateway-staging.factset.com/services/go-factset</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0dc9ff56-da83-4392-a256-081dfde1e821" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>404</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="5b9abd26-d83a-4a85-875d-71d8b51915d2" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>//data[1]</con:xpath>
+                  <con:element>data</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Not Found</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage>&lt;data contentType="text/plain; charset=ISO-8859-1" contentLength="9">&lt;![CDATA[Not Found]]&gt;&lt;/data></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="685500-Checking with the invalid ticker" id="48f7956d-830a-4315-a007-9ec9a256e269">
+        <con:settings/>
+        <con:config service="685500-Checking with the invalid ticker" resourcePath="/services/${#Global#TestServer}" methodName="Dfsnapshot-alpha" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="685500-Checking with the invalid ticker" id="9e78450c-276e-4992-bdb6-ccdc2022157b" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="3d2167d1-dea6-49e3-a68b-ab3a49a05f2b" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="988a498f-b787-47d3-acea-6e2becae98e6" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/@stale</con:xpath>
+                  <con:element>@stale</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Pricing Symbol Not Found</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/@Service</con:xpath>
+                  <con:element>@Service</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>FDS1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Error[1]/@code</con:xpath>
+                  <con:element>@code</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Request[1]/Host[1]</con:xpath>
+                  <con:element>Host</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>FactSet</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Request[1]/@id</con:xpath>
+                  <con:element>@id</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>123</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response Service="FDS1">
+   <Request id="123">
+      <RequestedSymbols>factset</RequestedSymbols>
+      <RequestedFields/>
+      <Host>FactSet</Host>
+   </Request>
+   <Error code="0" description=""/>
+   <Records>
+      <Record req_sym="factset" key="#NF#" stale="Pricing Symbol Not Found">
+         <Fields/>
+      </Record>
+   </Records>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="req_id" value="123"/>
+              <con:entry key="id" value="factset"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>req_id</con:entry>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="685503-Checking the Requested Fields" id="80b00621-7385-4387-8578-431f3e543a4e">
+        <con:settings/>
+        <con:config service="685503-Checking the Requested Fields" resourcePath="/services/${#Global#TestServer}" methodName="Dfsnapshot-alpha" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="685503-Checking the Requested Fields" id="42d71490-d6a2-4e39-bde3-4d0425b6b280" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d43c95ef-e4dc-455e-a438-f45d232c9dc3" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="64d56656-c3dd-48a1-af77-2111e30e2f86" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>//Response[1]/Request[1]/RequestedFields[1]</con:xpath>
+                  <con:element>RequestedFields</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>LAST_TIME_1,CUM_VOL,PREV_CLOSE,OPEN_1,HIGH_1,LOW_1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Request[1]/Host[1]</con:xpath>
+                  <con:element>Host</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>FactSet</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Error[1]/@description</con:xpath>
+                  <con:element>@description</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>No symbols or chain specified in the Query String</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Error[1]/@code</con:xpath>
+                  <con:element>@code</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>403</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/@Service</con:xpath>
+                  <con:element>@Service</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>FDS1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response Service="FDS1">
+   <Request id="100">
+      <RequestedSymbols/>
+      <RequestedFields>LAST_TIME_1,CUM_VOL,PREV_CLOSE,OPEN_1,HIGH_1,LOW_1</RequestedFields>
+      <Host>FactSet</Host>
+   </Request>
+   <Error code="403" description="No symbols or chain specified in the Query String"/>
+   <Records/>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="req_id" value="100"/>
+              <con:entry key="fields" value="LAST_TIME_1,CUM_VOL,PREV_CLOSE,OPEN_1,HIGH_1,LOW_1"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>fields</con:entry>
+              <con:entry>req_id</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="685504-Checking with invalid field name" id="42aecb67-9a1b-41d2-bcb7-bbf4e203c7c0">
+        <con:settings/>
+        <con:config service="685504-Checking with invalid field name" resourcePath="/services/${#Global#TestServer}" methodName="DFSnapshot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="685504-Checking with invalid field name" id="754c9a11-f140-41f5-a861-9618ba0d4852" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f2c01610-5158-43bc-b398-42060aaf5870" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="b0de3950-86ba-4f0f-b6dd-57b768cfbeb8" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>//Response[1]/Request[1]/RequestedFields[1]</con:xpath>
+                  <con:element>RequestedFields</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>LAST_TIME_1,CUM_VOL,PREV_CLOSE,gsyed,@hellp,123%20Hel</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[1]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>LAST_TIME_1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[2]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>CUM_VOL</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[3]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>PREV_CLOSE</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[4]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>GSYED</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[5]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>@HELLP</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[5]/@value</con:xpath>
+                  <con:element>@value</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>#NF#</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[6]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>123%20HEL</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[6]/@value</con:xpath>
+                  <con:element>@value</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>#NF#</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response Service="FDS1">
+   <Request id="">
+      <RequestedSymbols>fds</RequestedSymbols>
+      <RequestedFields>LAST_TIME_1,CUM_VOL,PREV_CLOSE,gsyed,@hellp,123%20Hel</RequestedFields>
+      <Host>FactSet</Host>
+   </Request>
+   <Error code="0" description=""/>
+   <Records>
+      <Record req_sym="fds" key="FDS-USA" stale="">
+         <Fields>
+            <Field id="302" name="LAST_TIME_1" value="160202267"/>
+            <Field id="601" name="CUM_VOL" value="0"/>
+            <Field id="610" name="PREV_CLOSE" value="234.68"/>
+            <Field id="0" name="GSYED" value="#NF#"/>
+            <Field id="0" name="@HELLP" value="#NF#"/>
+            <Field id="0" name="123%20HEL" value="#NF#"/>
+         </Fields>
+      </Record>
+   </Records>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="fds"/>
+              <con:entry key="fields" value="LAST_TIME_1,CUM_VOL,PREV_CLOSE,gsyed,@hellp,123%20Hel"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+              <con:entry>fields</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="685513-Checking with few fields with field id's" id="bc0c9231-59cf-4551-b022-cef4f49ef892">
+        <con:settings/>
+        <con:config service="685513-Checking with few fields with field id's" resourcePath="/services/${#Global#TestServer}" methodName="DFSnapshot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="685513-Checking with few fields with field id's" id="f6186145-98b3-4b47-96c6-40916d598a6a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a774d3b1-14ad-4499-8cea-f25529bddc93" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="bed0ed61-f4a0-4121-bb6f-8d0550d7885d" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>//Response[1]/Request[1]/RequestedFields[1]</con:xpath>
+                  <con:element>RequestedFields</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>5,102,202,302,2029,2037,10000</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/@Service</con:xpath>
+                  <con:element>@Service</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>FDS1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[1]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>EXCHANGE</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[2]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>BID_TIME_1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[3]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>ASK_TIME_1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[1]/@id</con:xpath>
+                  <con:element>@id</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>5</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[2]/@id</con:xpath>
+                  <con:element>@id</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>102</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[3]/@id</con:xpath>
+                  <con:element>@id</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>202</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[4]/@id</con:xpath>
+                  <con:element>@id</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>302</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[4]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>LAST_TIME_1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[5]/@id</con:xpath>
+                  <con:element>@id</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>2029</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[5]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>DESCRIPTION</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[6]/@id</con:xpath>
+                  <con:element>@id</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>2037</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[6]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>GMT_OFFSET</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[7]/@id</con:xpath>
+                  <con:element>@id</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>10000</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[7]/@name</con:xpath>
+                  <con:element>@name</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>????</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>//Response[1]/Records[1]/Record[1]/Fields[1]/Field[7]/@value</con:xpath>
+                  <con:element>@value</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>#NA#</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response Service="FDS1">
+   <Request id="">
+      <RequestedSymbols>aapl</RequestedSymbols>
+      <RequestedFields>5,102,202,302,2029,2037,10000</RequestedFields>
+      <Host>FactSet</Host>
+   </Request>
+   <Error code="0" description=""/>
+   <Records>
+      <Record req_sym="aapl" key="AAPL-USA" stale="">
+         <Fields>
+            <Field id="5" name="EXCHANGE" value="11099"/>
+            <Field id="102" name="BID_TIME_1" value="063435742"/>
+            <Field id="202" name="ASK_TIME_1" value="063435742"/>
+            <Field id="302" name="LAST_TIME_1" value="161500002"/>
+            <Field id="2029" name="DESCRIPTION" value="Apple Inc."/>
+            <Field id="2037" name="GMT_OFFSET" value="-300"/>
+            <Field id="10000" name="????" value="#NA#"/>
+         </Fields>
+      </Record>
+   </Records>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="aapl"/>
+              <con:entry key="fields" value="5,102,202,302,2029,2037,10000"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+              <con:entry>fields</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="869b5678-c867-460e-b537-3103d40de7e2">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="File">
+            <con:configuration>
+              <fileName>//tellusdevb05.pc.factset.com/Output/TickerList_Files/SingleTickers_delayed.txt</fileName>
+              <separator>,</separator>
+              <trim>true</trim>
+              <charset>Cp1252</charset>
+              <quotedValues>false</quotedValues>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>symbol</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="685510-TPC-Checking data with the tickers" id="fa3a75a2-9f05-4d37-86d5-e03252f5c5b1">
+        <con:settings/>
+        <con:config service="685510-TPC-Checking data with the tickers" resourcePath="/services/${#Global#TestServer}" methodName="DFSnapshot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="685510-TPC-Checking data with the tickers" id="f4d2502d-e89b-4ac7-a52c-d17416e84593" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="760b03f3-a41f-46bd-add3-0ea319d98f70" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="serv" value="FDS1"/>
+              <con:entry key="id" value="${DataSource#symbol}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>serv</con:entry>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="685511-CPC-Checking data with the tickers" id="17d1664d-ca04-4f57-ba1a-297040629e72">
+        <con:settings/>
+        <con:config service="685511-CPC-Checking data with the tickers" resourcePath="/services/${#Global#ControlServer}" methodName="DFSnapshot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="685511-CPC-Checking data with the tickers" id="79595ac4-50de-4cd7-95ee-20e9ae3d305c" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token Live#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="4e9ad4c6-9aad-41ee-8fe5-1a76c0ba9f70" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="id" value="${DataSource#symbol}" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>serv</con:entry>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="XML Check" id="f9f07182-38a9-4165-9205-0a901ccf9cba">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.xml.XmlUtil
+
+def groupID = context.expand( '${Login Details#groupID}' )
+def logfile = new File('////tellusdevb05.pc.factset.com//Output//DataFeed//Snapshot_LogFiles//' + groupID + '//logfile.txt')
+
+def tpcTicker = context.expand( '${685510-TPC-Checking data with the tickers#id}' )
+def cpcTicker = context.expand( '${685511-CPC-Checking data with the tickers#id}' )
+
+def tpc = context.expand( '${685510-TPC-Checking data with the tickers#ResponseAsXml#//Response[1]/Records[1]}' )
+def cpc = context.expand( '${685511-CPC-Checking data with the tickers#ResponseAsXml#//Response[1]/Records[1]}' )
+
+def tpcXml = new XmlSlurper().parseText(tpc)
+def cpcXml = new XmlSlurper().parseText(cpc)
+
+def tpcFieldsXml = tpcXml.Record.Fields
+def cpcFieldsXml = cpcXml.Record.Fields
+
+def tpcFieldID,cpcFieldID
+def tpcFieldname,cpcFieldname,tpcFieldvalue,cpcFieldvalue
+
+def flag = 0,temp = 0
+
+//log.info tpcFieldsXml.Field.size()
+//log.info cpcFieldsXml.Field.size()
+
+if(tpcFieldsXml.Field.size() > 0)
+{
+	if(cpcFieldsXml.Field.size() > 0)
+	{	
+		for(i=0; i&lt;tpcFieldsXml.Field.size();i++)
+		{
+			tpcFieldID = tpcFieldsXml.Field[i].@id
+			tpcFieldname = tpcFieldsXml.Field[i].@name
+			tpcFieldvalue = tpcFieldsXml.Field[i].@value
+			for(j=0;j&lt;cpcFieldsXml.Field.size();j++)
+			{
+				cpcFieldID = cpcFieldsXml.Field[j].@id
+				cpcFieldname = cpcFieldsXml.Field[j].@name
+				cpcFieldvalue = cpcFieldsXml.Field[j].@value
+				if(tpcFieldID == cpcFieldID)
+				{
+					flag = 0
+					if(tpcFieldname == cpcFieldname)
+					{
+						if(tpcFieldvalue != cpcFieldvalue)
+						{
+							logfile.append("For "+tpcTicker+", the value of field: "+tpcFieldID+", "+tpcFieldname+" doesnt match between TPC:"+tpcFieldvalue+" and CPC:"+cpcFieldvalue+"\n")
+							log.error("For "+tpcTicker+": the value of field: "+tpcFieldID+", "+tpcFieldname+" doesnt match between TPC:"+tpcFieldvalue+" and CPC:"+cpcFieldvalue)
+						}
+					}
+					else
+					{
+						logfile.append("For "+tpcTicker+", the fieldname for ID:"+tpcFieldID+",TPC field name: "+tpcFieldname+" doesnt match with CPC field name:"+cpcFieldname+"\n")
+					}
+					break
+				}
+				else
+				{
+					flag = 1
+				}
+			}
+			if(flag == 1)
+			{
+				logfile.append("For "+tpcTicker+", Field ID:"+tpcFieldID+" with fieldname:"+tpcFieldname+" is not present in CPC\n")
+				log.error("For "+tpcTicker+", Field ID:"+tpcFieldID+" with fieldname:"+tpcFieldname+" is not present in CPC\n")
+			}
+		}
+
+		for(i=0; i&lt;cpcFieldsXml.Field.size();i++)
+		{
+			cpcFieldID = cpcFieldsXml.Field[i].@id
+			cpcFieldname = cpcFieldsXml.Field[i].@name
+			cpcFieldvalue = cpcFieldsXml.Field[i].@value
+			for(j=0;j&lt;tpcFieldsXml.Field.size();j++)
+			{
+				tpcFieldID = tpcFieldsXml.Field[j].@id
+				tpcFieldname = tpcFieldsXml.Field[j].@name
+				tpcFieldvalue = tpcFieldsXml.Field[j].@value
+				if(tpcFieldID == cpcFieldID)
+				{
+					flag = 0
+					break
+				}
+				else
+				{
+					flag = 1
+				}
+			}
+			if(flag == 1)
+			{
+				logfile.append("For "+cpcTicker+", Field ID:"+cpcFieldID+" with fieldname:"+cpcFieldname+" is not present in TPC\n")
+				log.error("For "+cpcTicker+", Field ID:"+cpcFieldID+" with fieldname:"+cpcFieldname+" is not present in TPC\n")
+			}
+		}
+	}
+	else
+	{
+		logfile.append("For "+cpcTicker+", Data is not loaded in CPC\n")
+		log.error("For "+cpcTicker+", Data is not loaded in CPC\n")
+	}
+}
+else
+{
+	logfile.append("For "+tpcTicker+", Data is not loaded in TPC\n")
+	log.error("For "+tpcTicker+", Data is not loaded in TPC\n")
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="04e31c84-a200-4b1f-98f3-51db07f829f5">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>685510-TPC-Checking data with the tickers</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Single Tickers Log File Check" id="3d75cf5d-17f6-4e2e-9f33-2c5cfc773cf4">
+        <con:settings/>
+        <con:config>
+          <script>import java.lang.AssertionError
+def groupID = context.expand( '${Login Details#groupID}' )
+def dst = new File('////tellusdevb05.pc.factset.com//Output//DataFeed//Snapshot_LogFiles//' + groupID + '//logfile.txt')
+def files = dst.text
+assert files.size() == 0 : "There are Errors/Mismatches in the data for the tickers, Please check the log file"
+assert files.size() == 0 : "Error:\n"+dst.text</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="OC Tickers" id="1c96babd-fee3-4b80-bf12-a4c8ff3a2430">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="File">
+            <con:configuration>
+              <fileName>//tellusdevb05.pc.factset.com/Output/TickerList_Files/OC Tickers.txt</fileName>
+              <separator>,</separator>
+              <trim>true</trim>
+              <charset>Cp1252</charset>
+              <quotedValues>false</quotedValues>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>symbol</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Checking OC without any Filter" id="e27a86a7-f5c2-42d8-b5ef-ce4b532155f0">
+        <con:settings/>
+        <con:config service="Checking OC without any Filter" resourcePath="/services/${#Global#TestServer}" methodName="DFSnapshot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Checking OC without any Filter" id="98ca9efb-ebd0-43ce-a10a-c8cb194eb9ac" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a1a5c0ff-f448-4347-911c-4ca524e65e56" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="OC" value="${OC Tickers#symbol}" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>OC</con:entry>
+              <con:entry>fields</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="OC Validation" id="20599bcc-88bb-4e43-8a8d-14bb2757764e">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.xml.XmlUtil
+
+def tpc = context.expand( '${Checking OC without any Filter#ResponseAsXml#//Response[1]/Records[1]}' )
+def tpcXml = new XmlSlurper().parseText(tpc)
+
+def id = context.expand( '${Checking OC without any Filter#OC}' )
+def id2 = id.toString().split('-');
+
+def option
+
+assert tpcXml.Record.size() > 1 : "No Options were loaded for the ticker: "+id
+
+for(i=0;i&lt;tpcXml.Record.size();i++)
+{
+	option = tpcXml.Record[i].@req_sym
+	option = option.toString()
+	assert option.contains(id2[0].toUpperCase()) : "Option: "+option+" loaded for ticker: "+id+" is not valid";
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Checking OC with MINMAX Filter" id="a07d770e-534d-4899-8273-adccf7da66b0">
+        <con:settings/>
+        <con:config service="Checking OC with MINMAX Filter" resourcePath="/services/${#Global#TestServer}" methodName="Dfsnapshot-alpha" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Checking OC with MINMAX Filter" id="b00e70a3-60b8-48c6-9a09-b4b9455af7c5" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://lima-gateway-staging.factset.com/services/dfsnapshot-alpha</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="4a8a4971-2e21-4ac3-a500-a041632aeb1d" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="sf" value="VALUE_MINMAX,BID_1,0.5,0.65"/>
+              <con:entry key="OC" value="${OC Tickers#symbol}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>OC</con:entry>
+              <con:entry>fields</con:entry>
+              <con:entry>sf</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="MINMAX Filter Validation" id="31eb5059-9529-49e2-9ba0-a6b06c079168">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.xml.XmlUtil
+
+def id = context.expand( '${Checking OC with MINMAX Filter#OC}' )
+
+def tpc = context.expand( '${Checking OC with MINMAX Filter#ResponseAsXml#//Response[1]/Records[1]}' )
+def tpcXml = new XmlSlurper().parseText(tpc)
+
+//log.info tpcXml.Record.size()
+//log.info tpcXml.Record[0].Fields.Field.size()
+
+assert tpcXml.Record.size() > 1 : "No Options were loaded for the ticker: "+id
+
+for(i=0;i&lt;tpcXml.Record.size();i++)
+{
+	for(j=0;j&lt;tpcXml.Record[i].Fields.Field.size();j++)
+	{
+		def option = tpcXml.Record[i].@req_sym
+		def fieldname = tpcXml.Record[i].Fields.Field[j].@name
+		log.info fieldname
+		if(fieldname == "BID_1")
+		{
+			def fieldvalue = tpcXml.Record[i].Fields.Field[j].@value
+			def bidFloat = fieldvalue.toFloat()
+			log.info bidFloat
+			assert bidFloat >= 0.5 &amp;&amp; bidFloat &lt;= 0.65 : "For Option: "+option+", Bid Value is not in the range of 0.5 and 0.65"
+		}
+	}
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Checking OC with VALUE_EQUALS Filter" id="84148377-f1e2-4b51-9b2b-25a07cc518e4">
+        <con:settings/>
+        <con:config service="Checking OC with VALUE_EQUALS Filter" resourcePath="/services/${#Global#TestServer}" methodName="Dfsnapshot-alpha" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Checking OC with VALUE_EQUALS Filter" id="9fdc8955-fe53-4629-8219-84194121260a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1e4d9daa-1a9b-4a75-8faa-4da203885259" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="sf" value="VALUE_EQUALS,PUT_CALL,P"/>
+              <con:entry key="OC" value="${OC Tickers#symbol}"/>
+              <con:entry key="fields" value="PUT_CALL,BID_1"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>OC</con:entry>
+              <con:entry>fields</con:entry>
+              <con:entry>sf</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="VALUE EQUALS Filter Validation" id="d37ae1ca-b334-4a94-9c9a-857158a8a328">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.xml.XmlUtil
+
+def id = context.expand( '${Checking OC with VALUE_EQUALS Filter#OC}' )
+
+def tpc = context.expand( '${Checking OC with VALUE_EQUALS Filter#ResponseAsXml#//Response[1]/Records[1]}' )
+def tpcXml = new XmlSlurper().parseText(tpc)
+//log.info tpcXml.Record.size()
+//log.info tpcXml.Record.Fields.Field.@name
+
+assert tpcXml.Record.size() > 1 : "No Options were loaded for the ticker: "+id
+
+for(i=0;i&lt;tpcXml.Record.size();i++)
+{
+	for(j=0;j&lt;tpcXml.Record[i].Fields.Field.size();j++)
+	{
+		def option = tpcXml.Record[i].@req_sym
+		def fieldname = tpcXml.Record[i].Fields.Field[j].@name
+		//log.info fieldname
+		if(fieldname == "PUT_CALL")
+		{
+			def fieldvalue = tpcXml.Record[i].Fields.Field[j].@value
+			assert fieldvalue == "P" : "For option: "+option+", PUT_CALL is not P"
+		}
+	}
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Checking OC with VALUE_NOT_EQUALS Filter" id="3ad166f7-9357-45b8-b975-382ee68549b1">
+        <con:settings/>
+        <con:config service="Checking OC with VALUE_NOT_EQUALS Filter" resourcePath="/services/${#Global#TestServer}" methodName="DFSnapshot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Checking OC with VALUE_NOT_EQUALS Filter" id="244b985b-a4e8-464c-9c46-e452d5a9e5a3" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-DataDirect-Auth-Token" value="${Lima Token#ResponseAsXml#//ns1:Response[1]/ns1:token[1]}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>http://lima-gateway-staging.factset.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://lima-gateway-staging.factset.com/services/DFSnapshot</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f126872b-a568-4f40-814a-79c5a6d16321" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="OC" value="${OC Tickers#symbol}" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>OC</con:entry>
+              <con:entry>fields</con:entry>
+              <con:entry>sf</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="fade4f03-88c8-4d8f-9023-1424cec9ec97">
+                <con:authProfile>No Authorization</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="VALUE NOT EQUALS Filter Validation" id="dc13ac53-a254-497b-999e-ea1ddfcb8abf">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.xml.XmlUtil
+
+def tpc = context.expand( '${Checking OC with VALUE_NOT_EQUALS Filter#ResponseAsXml#//Response[1]/Records[1]}' )
+def tpcXml = new XmlSlurper().parseText(tpc)
+//log.info tpcXml.Record.size()
+//log.info tpcXml.Record.Fields.Field.@name
+def id = context.expand( '${Checking OC with VALUE_NOT_EQUALS Filter#OC}' )
+
+assert tpcXml.Record.size() > 1 : "No Options were loaded for the ticker: "+id
+
+for(i=0;i&lt;tpcXml.Record.size();i++)
+{
+	for(j=0;j&lt;tpcXml.Record[i].Fields.Field.size();j++)
+	{
+		def option = tpcXml.Record[i].@req_sym
+		def fieldname = tpcXml.Record[i].Fields.Field[j].@name
+		if(fieldname == "CUM_VOL")
+		{
+			def fieldvalue = tpcXml.Record[i].Fields.Field[j].@value
+			//log.info fieldvalue.toInteger()
+			assert fieldvalue != "0" : "For option: "+option+", Cum Vol is Zero"
+		}
+	}
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="OC Tickers Loop" id="9ff7ee0c-f5c5-42b4-8744-fa0581be1fa7">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>OC Tickers</dataSourceStep>
+          <targetStep>Checking OC without any Filter</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>80b00621-7385-4387-8578-431f3e543a4e</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>0cd8a0a2-198b-41b3-99c8-ca11483ab6d0</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>07782eab-83a3-4b6e-b6a2-45f6038bb5dc</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>e27a86a7-f5c2-42d8-b5ef-ce4b532155f0</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3d75cf5d-17f6-4e2e-9f33-2c5cfc773cf4</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:environment id="fade4f03-88c8-4d8f-9023-1424cec9ec97" name="qa">
+    <con:service type="REST" name="Lima Token">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://lima-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Lima Token Live">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://lima.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="685501-Checking with wrong LIMA service">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="685500-Checking with the invalid ticker">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="685503-Checking the Requested Fields">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="685504-Checking with invalid field name">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="685513-Checking with few fields with field id's">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="685510-TPC-Checking data with the tickers">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="685511-CPC-Checking data with the tickers">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://lima-gateway.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Checking OC without any Filter">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Checking OC with MINMAX Filter">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Checking OC with VALUE_EQUALS Filter">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Checking OC with VALUE_NOT_EQUALS Filter">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://lima-gateway-staging.factset.com</con:endpoint>
+    </con:service>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

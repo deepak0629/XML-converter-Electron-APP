@@ -1,0 +1,26 @@
+{
+  "name": "Samplefirstapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "release": "electron-webpack && electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "electron": "^5.0.1",
+    "electron-packager": "^13.1.1",
+    "electron-prebuilt": "^1.4.13",
+    "electron-reload": "^1.4.0",
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {
+    "electron-builder": "^20.40.2",
+    "electron-webpack": "^2.6.2"
+  }
+}
